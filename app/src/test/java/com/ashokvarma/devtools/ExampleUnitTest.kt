@@ -1,4 +1,4 @@
-package com.ashokvarma.appbundleinstaller
+package com.ashokvarma.devtools
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

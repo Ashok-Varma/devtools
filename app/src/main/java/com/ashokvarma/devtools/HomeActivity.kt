@@ -1,8 +1,8 @@
-package com.ashokvarma.appbundleinstaller
+package com.ashokvarma.devtools
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.ashokvarma.appbundleinstaller.ui.home.HomeFragment
+import com.ashokvarma.devtools.ui.bundletool.BundleToolFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -11,7 +11,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.home_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, HomeFragment.newInstance())
+                .replace(R.id.container, BundleToolFragment.newInstance())
                 .commitNow()
         }
     }

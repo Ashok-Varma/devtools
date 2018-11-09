@@ -1,4 +1,4 @@
-package com.ashokvarma.appbundleinstaller;
+package com.ashokvarma.devtools;
 
 import androidx.multidex.MultiDexApplication;
 
