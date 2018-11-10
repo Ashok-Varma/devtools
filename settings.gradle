@@ -1,1 +1,1 @@
-include ':app', ':bundletool'
+include ':app', ':bundletool', ':androidbundletoolhelper'

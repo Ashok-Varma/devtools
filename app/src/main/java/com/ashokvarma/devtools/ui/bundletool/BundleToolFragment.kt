@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
-import com.android.tools.build.bundletool.BundleToolMain
+import com.ashokvarma.androidbundletoolhelper.BundleToolHelper
 import com.ashokvarma.devtools.R
 
 class BundleToolFragment : androidx.fragment.app.Fragment() {
@@ -24,19 +24,12 @@ class BundleToolFragment : androidx.fragment.app.Fragment() {
         view
             .findViewById<View>(R.id.buildButton)
             .setOnClickListener {
-                val path = context?.getExternalFilesDir("")?.absolutePath
+                val path = context?.getExternalFilesDir("")?.absolutePath.toString()
                 val bundlePath = path
                 val bundleName = ""
                 val apkPath = path
                 val apkName = "myapp.apks"
-
-                val arguments = arrayOf(
-                    "build-apks",
-                    "--bundle=$bundlePath/$bundleName",
-                    "--output=$apkPath/$apkName",
-                    "--universal"
-                )
-                BundleToolMain.main(arguments)
+                BundleToolHelper(bundlePath, bundleName, apkPath, apkName).generateAPKBundle()
             }
         return view
     }
